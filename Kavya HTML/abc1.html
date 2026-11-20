@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Job Application Tracker</h1>
+    <p>Manage your career journey in one place</p>
+</header>
+
+<div class="container">
+
+    <section class="profile">
+        <h2>My Profile</h2>
+        <input id="name" placeholder="Your Name">
+        <input id="email" type="email" placeholder="Your Email">
+        <input id="skills" placeholder="Your Skills">
+        <button onclick="saveProfile()">Save Profile</button>
+    </section>
+
+    <section class="dashboard">
+        <h2>Dashboard</h2>
+        <div class="stats">
+            <div>Total: <span id="total">0</span></div>
+            <div>Applied: <span id="applied">0</span></div>
+            <div>Interviews: <span id="interview">0</span></div>
+            <div>Selected: <span id="selected">0</span></div>
+        </div>
+    </section>
+
+    <section class="application">
+        <h2>Add Job Application</h2>
+        <input id="company" placeholder="Company Name">
+        <input id="role" placeholder="Job Role">
+        <input id="date" type="date">
+
+        <select id="status">
+            <option>Applied</option>
+            <option>Interview</option>
+            <option>Selected</option>
+            <option>Rejected</option>
+        </select>
+
+        <textarea id="activity"
+        placeholder="Activity / Interview Notes"></textarea>
+
+        <button onclick="addJob()">Add Application</button>
+    </section>
+
+    <section>
+        <h2>My Applications</h2>
+        <input id="search" placeholder="Search company or role"
+        oninput="displayJobs()">
+
+        <div id="jobList"></div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
